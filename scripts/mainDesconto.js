@@ -1,10 +1,10 @@
-const inputBuyRef = document.querySelector('#inputBuy');
+const firstValueRef = document.querySelector('#inputBuy');
 
-const inputSellRef = document.querySelector('#inputSell');
+const secondValueRef = document.querySelector('#inputSell');
 
-const lucroVendaRef = document.querySelector('#lucroVenda')
+const valueDifRef = document.querySelector('#lucroVenda')
 
-const percentualVendaRef = document.querySelector('#percentualVenda');
+const percentualDiscontRef = document.querySelector('#percentualVenda');
 
 const btnCalcularRef = document.querySelector('#btnCalcular');
 
@@ -14,8 +14,8 @@ var validValorVendaRef = document.querySelector('#validValorVenda')
 
 
 
-inputBuyRef.addEventListener('keyup', () => {
-    if (isNaN(inputBuyRef.value.replace(",",".")) || inputBuyRef.value.replace(",",".") == 0) {
+firstValueRef.addEventListener('keyup', () => {
+    if (isNaN(firstValueRef.value.replace(",",".")) || firstValueRef.value.replace(",",".") == 0) {
 
         validValorCompraRef.style.display = 'block'
         btnCalcularRef.setAttribute('disabled', 'disabled')
@@ -25,8 +25,8 @@ inputBuyRef.addEventListener('keyup', () => {
     }
 })
 
-inputSellRef.addEventListener('keyup', () => {
-    if (isNaN(inputSellRef.value.replace(",",".")) || inputSellRef.value.replace(",",".") == 0) {
+secondValueRef.addEventListener('keyup', () => {
+    if (isNaN(secondValueRef.value.replace(",",".")) || secondValueRef.value.replace(",",".") == 0) {
         validValorVendaRef.style.display = 'block'
         btnCalcularRef.setAttribute('disabled', 'disabled')
     } else {
@@ -41,19 +41,19 @@ inputSellRef.addEventListener('keyup', () => {
 
 btnCalcularRef.addEventListener('click',  () => {
 
-    if (isNaN(inputBuyRef.value.replace(",",".")) || inputBuyRef.value.replace(",",".") == 0 || isNaN(inputSellRef.value.replace(",",".")) || inputSellRef.value.replace(",",".") == 0) {
+    if (isNaN(firstValueRef.value.replace(",",".")) || firstValueRef.value.replace(",",".") == 0 || isNaN(secondValueRef.value.replace(",",".")) || secondValueRef.value.replace(",",".") == 0) {
         alert('Você deve digitar um valor válido.') 
         location.reload()           
 
     }
 
 
-    var buyValor = parseFloat(inputBuyRef.value.replace(",",".").replace(/[^0-9\.]/g,''))
-    var sellValor = parseFloat(inputSellRef.value.replace(",",".").replace(/[^0-9\.]/g,''))    
+    var value1 = parseFloat(firstValueRef.value.replace(",",".").replace(/[^0-9\.]/g,''))
+    var value2 = parseFloat(secondValueRef.value.replace(",",".").replace(/[^0-9\.]/g,''))    
 
 
-    var lucro = (sellValor - buyValor)
-    var porcentagem = ((sellValor / buyValor)-1) *100
+    var lucro = (value1 - value2)
+    var porcentagem = ((value1 / value2)-1) *100
 
     var resultadoLucro = `
     <p>R$ ${lucro.toFixed(2)}</p>
@@ -63,12 +63,12 @@ btnCalcularRef.addEventListener('click',  () => {
     <p>${porcentagem.toFixed(2)}%</p>
     `
 
-    lucroVendaRef.innerHTML = resultadoLucro
+    valueDifRef.innerHTML = resultadoLucro
 
-    percentualVendaRef.innerHTML = resultadoPorcentagem
+    percentualDiscontRef.innerHTML = resultadoPorcentagem
 
-    inputBuyRef.value = ''
-    inputSellRef.value = ''
+    firstValueRef.value = ''
+    secondValueRef.value = ''
 
 
 })
