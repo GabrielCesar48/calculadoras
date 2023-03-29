@@ -21,7 +21,7 @@ body {
 
 .form-style::placeholder {
     color: rgba(207, 207, 207, 0.712);
-    font-size: 0.6em;
+    font-size: 0.75em;
     border-color: #ffffff;
 }
 
@@ -34,19 +34,13 @@ body {
 
 .texto__resultado {
     background-color: transparent;
-    color: #ffffff !important;
+    color: #EFFFFA;
     font-weight: bolder;
     border: none;
 }
 
-.resultado {
-    color: #ffffff !important;
-    font-weight: bold !important;
-    margin: 0;
-}
-
 .fundo__ {
-    background-color: transparent;
+    background-color: #35393C;
     
 }
 
@@ -58,7 +52,7 @@ body {
 }
 
 .botao__calcular:hover {
-    background-color: #E40321 !important;
+    background-color: #E40321;
     color: #EFFFFA;
     font-weight: bolder;
 }

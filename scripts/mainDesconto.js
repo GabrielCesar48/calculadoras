@@ -53,14 +53,14 @@ btnCalcularRef.addEventListener('click',  () => {
 
 
     var lucro = (value1 - value2)
-    var porcentagem = ((value1 / value2)-1) *100
+    var porcentagem = ((value2 / value1)-1) *100
 
     var resultadoLucro = `
-    <p>R$ ${lucro.toFixed(2)}</p>
+    <p class="resultado">R$ ${lucro.toFixed(2)}</p> 
     
     `
     var resultadoPorcentagem = `
-    <p>${porcentagem.toFixed(2)}%</p>
+    <p class="resultado">${porcentagem.toFixed(2)}%</p>
     `
 
     valueDifRef.innerHTML = resultadoLucro
