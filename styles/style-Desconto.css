@@ -2,14 +2,15 @@
 
 
 body {
-    background-image: url(../assets/img/5172661.jpg);
+    background-image: url(../assets/img/5197265-ai.svg);
     background-size: cover;
+    background-position: center;
 }
 
 
-.form-control::placeholder {
-    color: rgba(207, 207, 207, 0.425);
-    font-size: 12px;
+.form-style::placeholder {
+    color: rgba(207, 207, 207, 0.712);
+    font-size: 0.75em;
 }
 
 
@@ -20,7 +21,7 @@ body {
 }
 
 .texto__resultado {
-    background-color: #35393C;
+    background-color: transparent;
     color: #EFFFFA;
     font-weight: bolder;
     border: none;

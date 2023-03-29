@@ -18,16 +18,20 @@ inputBuyRef.addEventListener('keyup', () => {
     if (isNaN(inputBuyRef.value.replace(",",".")) || inputBuyRef.value.replace(",",".") == 0) {
 
         validValorCompraRef.style.display = 'block'
+        btnCalcularRef.setAttribute('disabled', 'disabled')
     } else {
         validValorCompraRef.style.display = 'none'
+        btnCalcularRef.removeAttribute('disabled')
     }
 })
 
 inputSellRef.addEventListener('keyup', () => {
     if (isNaN(inputSellRef.value.replace(",",".")) || inputSellRef.value.replace(",",".") == 0) {
         validValorVendaRef.style.display = 'block'
+        btnCalcularRef.setAttribute('disabled', 'disabled')
     } else {
         validValorVendaRef.style.display = 'none'
+        btnCalcularRef.removeAttribute('disabled')
     }
 })
 
@@ -38,10 +42,8 @@ inputSellRef.addEventListener('keyup', () => {
 btnCalcularRef.addEventListener('click',  () => {
 
     if (isNaN(inputBuyRef.value.replace(",",".")) || inputBuyRef.value.replace(",",".") == 0 || isNaN(inputSellRef.value.replace(",",".")) || inputSellRef.value.replace(",",".") == 0) {
-        alert('Você deve digitar um valor válido.')
-        let erroValor = `<p>Valor inválido</p>`
-        lucroVendaRef.innerHTML = erroValor
-        percentualVendaRef.innerHTML = erroValor        
+        alert('Você deve digitar um valor válido.') 
+        location.reload()           
 
     }
 
