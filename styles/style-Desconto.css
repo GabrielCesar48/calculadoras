@@ -1,5 +1,12 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
 
+
+body {
+    background-image: url(../assets/img/5172661.jpg);
+    background-size: cover;
+}
+
+
 .form-control::placeholder {
     color: rgba(207, 207, 207, 0.425);
     font-size: 12px;
