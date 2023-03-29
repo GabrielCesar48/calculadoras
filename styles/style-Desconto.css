@@ -2,23 +2,27 @@
 
 
 body {
-    background-image: url(../assets/img/5197265-ai.svg);
+    background-image: url(../assets/img/sl_043021_42650_04-ai\ \(1\).png);
     background-size: cover;
     background-position: center center;
 }
 
 @media only screen and (max-width: 768px) {
     body {
-        background-image: url(../assets/img/5197265-backgroundMOBILE.png);
+        background-image: url(../assets/img/fundo-calc-descontoMOBILE.svg);
         background-size: cover;
         background-position: center center;
     }
 }
 
+.form-style {
+    border-color: #ffffff !important;
+}
 
 .form-style::placeholder {
     color: rgba(207, 207, 207, 0.712);
     font-size: 0.75em;
+    border-color: #ffffff;
 }
 
 
@@ -111,3 +115,17 @@ body {
 .justificado {
     text-align: justify;
 }
+
+
+.mt-6 {
+    margin-top: 9rem !important;
+  }
+  
+  .m-7 {
+    margin: 6rem !important;
+  }
+  
+  .m-8 {
+    margin: 8rem !important;
+  }
+  
