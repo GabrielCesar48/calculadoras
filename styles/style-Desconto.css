@@ -129,3 +129,14 @@ body {
     margin: 8rem !important;
   }
   
+  .active {
+    color: #24348E !important;
+  }
+
+  .nav-link:hover {
+    color: #E40321 !important;
+  }
+
+  .icon-hover:hover {
+    color: #E40321 !important;
+  }
