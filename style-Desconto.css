@@ -1,0 +1,97 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+.form-control::placeholder {
+    color: rgba(207, 207, 207, 0.425);
+    font-size: 12px;
+}
+
+
+.valor__compra {
+    background-color: #3643ff;
+    color: #EFFFFA;
+    font-weight: bolder;
+}
+
+.texto__resultado {
+    background-color: #35393C;
+    color: #EFFFFA;
+    font-weight: bolder;
+    border: none;
+}
+
+.fundo__ {
+    background-color: #35393C;
+    
+}
+
+.botao__calcular {
+    background-color: #EFFFFA;
+    border-color: #35393C;
+    color: #3643ff;
+    font-weight: bolder;
+}
+
+.botao__calcular:hover {
+    background-color: #E40321;
+    color: #EFFFFA;
+    font-weight: bolder;
+}
+
+#validValorCompra {
+    display: none;
+}
+
+#validValorVenda {
+    display: none;
+}
+
+
+.svgTexto {
+    /* display: block; */
+    font: 3rem 'Montserrat';
+    margin: 0 auto;
+    height: 2.5em;
+    width: 100%;
+}
+
+.text-copy {
+    fill: none;
+    stroke: white;
+    stroke-dasharray: 6% 29%;
+    stroke-width: 2.5px;
+    stroke-dashoffset: 0%;
+    animation: stroke-offset 5.5s infinite linear;
+}
+
+.text-copy:nth-child(1){
+	stroke: #ffffff;
+	animation-delay: -1;
+}
+
+.text-copy:nth-child(2){
+	stroke: #3643ff;
+	animation-delay: -2s;
+}
+
+.text-copy:nth-child(3){
+	stroke: #24348E;
+	animation-delay: -3s;
+}
+
+.text-copy:nth-child(4){
+	stroke: #E40321;
+	animation-delay: -4s;
+}
+
+.text-copy:nth-child(5){
+	stroke: #3643ff;
+	animation-delay: -5s;
+}
+
+@keyframes stroke-offset{
+	100% {stroke-dashoffset: -35%;}
+}
+
+.justificado {
+    text-align: justify;
+}
