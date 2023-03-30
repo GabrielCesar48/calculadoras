@@ -12,6 +12,10 @@ var validValorCompraRef = document.querySelector('#validValorCompra');
 
 var validValorVendaRef = document.querySelector('#validValorVenda')
 
+const calcMemoryRef = document.querySelector('#calcMemory')
+
+var calcResultsRef = document.querySelector('#calcResults')
+
 
 
 firstValueRef.addEventListener('keyup', () => {
@@ -69,6 +73,22 @@ btnCalcularRef.addEventListener('click',  () => {
 
     firstValueRef.value = ''
     secondValueRef.value = ''
+
+    calcMemoryRef.removeAttribute('hidden')
+
+    var tableResult =
+    `
+    <tr>
+        <td>${value1}</td>
+        <td>${value2}</td>
+        <td> ${lucro.toFixed(2)} </td>
+        <td> ${porcentagem.toFixed(2)}</td>
+    </tr>    
+    `
+
+    calcResultsRef.innerHTML += tableResult
+
+
 
 
 })
