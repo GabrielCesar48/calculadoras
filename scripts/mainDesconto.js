@@ -78,17 +78,13 @@ btnCalcularRef.addEventListener('click',  () => {
 
     var tableResult =
     `
-    <tr>
-        <td>${value1}</td>
-        <td>${value2}</td>
-        <td> ${lucro.toFixed(2)} </td>
-        <td> ${porcentagem.toFixed(2)}</td>
+    <tr class="small">
+        <td>R$ ${value1.toFixed(2)}</td>
+        <td>R$ ${value2.toFixed(2)}</td>
+        <td>R$ ${lucro.toFixed(2)}</td>
+        <td>${porcentagem.toFixed(2)}%</td>
     </tr>    
     `
 
     calcResultsRef.innerHTML += tableResult
-
-
-
-
 })
